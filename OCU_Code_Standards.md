@@ -20,9 +20,13 @@ public void function sayHi(string name, numeric age) output="false" {
 
 **Bad**
 ```cfm
+<cfscript>
+
 public void function sayHi(string name , numeric age) output="false" {
    //do stuff
 }
+
+</cfscript>
 ```
 
 * *Do not use spaces* before or after parenthesis when defining and calling
