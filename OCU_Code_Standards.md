@@ -1,43 +1,26 @@
-ColdFusion Coding Style Guide
-=============================
-
-**Author:** Adam Presley
-
-1. Whitespace and Formatting
+Whitespace and Formatting
 ----------------------------
 
 ### 1.1 Indentation
 * Use hard tabs set to three (3) spaces.
 * Do not mix tabs and spaces.
 
-### 1.2 Line Length
-* Line length *must not* exceed 120 characters
-* Lines *should not* exceed 80 characters
-
-### 1.3 Spaces
+### Spaces
 * Use spaces after commas in arguments lists
 * *Do not use spaces* before commas in argument lists
 
 **Good**
 ```cfm
-<cfscript>
-
 public void function sayHi(string name, numeric age) output="false" {
-
+   //do stuff
 }
-
-</cfscript>
 ```
 
 **Bad**
 ```cfm
-<cfscript>
-
 public void function sayHi(string name , numeric age) output="false" {
-
+   //do stuff
 }
-
-</cfscript>
 ```
 
 * *Do not use spaces* before or after parenthesis when defining and calling
