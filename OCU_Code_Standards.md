@@ -198,12 +198,8 @@ local.sum = 1 + 4 + local.somethingElse;
 ```
 
 ### CFML/Script Conventions
-When working with CFML (not CFScript) the following applies.
-
-* ColdFusion tags *must be* **Lower case**
-* Tags must either have an equivalent closing tag, or be self-closing
-* All tags must be indented one level from their parent. This applies when
-   the parent is another CFML tag, or an HTML tag
+* ColdFusion tags should be **Lower case** with an equivalent closing tag, or be self-closing
+* All tags must be indented one level from their parent in both ColdFusion and HTML tags
 
 **Good**
 ```cfm
@@ -225,142 +221,65 @@ When working with CFML (not CFScript) the following applies.
 <cfoutput>#text#</cfoutput></p>
 ```
 
-When working with CF function in both script and CFML, the following applies.
-
-* ColdFusion functions *must be* **Camel case**
-
-**Example**
-```cfm
-<cfscript>
-
-public void function addItemToCart(required CartItem item) output="false" {
-   arrayAppend(variables.shoppingCart, item);
-}
-
-</cfscript>
-```
-
 ### Quotes
-ColdFusion allows using both double and single quotes for working with strings.
+ColdFusion **allows using** both double and single quotes for working with strings.
 
-* *Always* prefer double quotes for creating strings
+* Always use double quotes when possible 
 * Use single quotes when creating strings that contain double quotes and
-   would require excessive escaping. This makes the code more readable
+   would require excessive escaping.
 
 Casing and Naming
 --------------------
 
 ### 2.1 Casing Definitions
-* **Lower case** - All digits are lower cased. Example: ```mynamehere```
-* **Upper case** - All digits are upper cased. Example: ```MYNAMEHERE```
+* **Lower case** - All charaters are lower cased. Example: ```mynamehere```
+* **Upper case** - All charaters are upper cased. Example: ```MYNAMEHERE```
 * **Pascal case** - First letter of each word upper cased, starting with an upper
    case letter. Example: ```MyNameHere```
 * **Camel case** - First letter of each word upper cased, starting with a lower
    case letter. Example: ```myNameHere```
 
 ### Variable Names
-* All variable names *must be* in **camel case**
+* All variable names should be **camel case**
 
 **Example**
 ```cfm
 <cfscript>
 
-local.payPeriod = "Bi-weekly";
-local.allCustomerSettings = [];
-
-</cfscript>
-```
-
-### Constants
-ColdFusion doesn't support true constants, but...
-
-* As a convention use **Upper case** when defining a variable that is intended
-   to be used as a constant
-* Use underscores between words
-
-**Example**
-```cfm
-<cfscript>
-
-   this.VALID_STATES = [
-      "Ready",
-      "Parsing",
-      "EOF"
-   ];
+   local.payPeriod = "Bi-weekly";
+   local.allCustomerSettings = [];
 
 </cfscript>
 ```
 
 ### Function Names
-* Function names *must use* **Camel case**. Example: ```deleteRecordByID()```
+* Function names are **Camel case**. Example: ```deleteRecordByID()```
 
-### Abbreviations
-Avoid abbreviations when possible. If a given abbreviation is well known to
-a given industry or domain it is acceptable to use.
-
-### Acronyms
-Acronyms are similar to abbreviations. They should be avoided when possible.
-However some acronyms, if common enough in your domain, are acceptable.
-
-* Acronyms *must be* **Upper case** in all situations, ***unless*** they are
-   at the start of the word. Words, variables, and functions that start with
-   an acronym *must be* **Lower case**
-
-**Examples**
-```cfm
-<cfscript>
-
-   local.userSSN = "12345";
-   request.urlPrefix = "http://";
-   local.workerID = 1;
-   local.id = 10;
-
-</cfscript>
-```
-
-### Package Names
-Much like in Java ColdFusion supports the concept of packages. A component
-placed in a directory structure is considered to part of that package. For
-example, a component named **PermissionService.cfc** placed in a directory path
-of ```/Services/Security``` is considered to be in the *Services.Security*
-package.
-
-* Directories designed to be used as package *must use* **Pascal case**
-
-This means that in the above example both the **Services** and the **Security**
-directories follow the **Pascal case** convention. Then when instantiating
-a component from this package it will look like this.
-
-```cfm
-<cfscript>
-
-   local.permissionService = new Services.Security.PermissionService();
-
-</cfscript>
-```
+### Abbreviations & Acroyms
+Avoid abbreviations and acroyms when possible unless well known such as SSN, URL, Fasfa, ID
 
 ### Component File Names
-* Components (CFC files) *must use* **Pascal case**. Example: ```TokenMapper.cfc```
+* Components (CFC files) names use **Pascal case**. Example: ```TokenMapper.cfc```
 
 ### CFM File Names
-* ColdFusion files with a CFM extension *must use* **Camel case**.
-   Example: ```permissionManager.cfm```
+* Filenames with a CFM extension should be **Camel case**. Example: ```permissionManager.cfm```
+* Directory names are **Lower Case**
 
 ### Scopes
-* All scope names *must be* **Lower case**
+* All scope names should **Lower case**
 
 **Example**
 ```cfm
 <cfscript>
 
-public string function boldAName(required string name) output="false" {
-   return "<strong>#arguments.name#</strong>";
-}
-
-request.myBoldedName = boldAName(name="Adam");
-
-session.name = "Adam";
-session.boldedName = request.myBoldedName;
+   public string function boldAName(required string name) output="false" {
+      return "<strong>#arguments.name#</strong>";
+   }
+   
+   request.myBoldedName = boldAName(name="Adam");
+   
+   session.name = "Adam";
+   session.boldedName = request.myBoldedName;
 
 </cfscript>
 ```
