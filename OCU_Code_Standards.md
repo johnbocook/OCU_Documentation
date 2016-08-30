@@ -240,14 +240,14 @@ public void function addItemToCart(required CartItem item) output="false" {
 </cfscript>
 ```
 
-### 1.6 Quotes
+### Quotes
 ColdFusion allows using both double and single quotes for working with strings.
 
 * *Always* prefer double quotes for creating strings
 * Use single quotes when creating strings that contain double quotes and
    would require excessive escaping. This makes the code more readable
 
-2. Casing and Naming
+Casing and Naming
 --------------------
 
 ### 2.1 Casing Definitions
@@ -258,7 +258,7 @@ ColdFusion allows using both double and single quotes for working with strings.
 * **Camel case** - First letter of each word upper cased, starting with a lower
    case letter. Example: ```myNameHere```
 
-### 2.2 Variable Names
+### Variable Names
 * All variable names *must be* in **camel case**
 
 **Example**
@@ -271,7 +271,7 @@ local.allCustomerSettings = [];
 </cfscript>
 ```
 
-### 2.3 Constants
+### Constants
 ColdFusion doesn't support true constants, but...
 
 * As a convention use **Upper case** when defining a variable that is intended
@@ -282,23 +282,23 @@ ColdFusion doesn't support true constants, but...
 ```cfm
 <cfscript>
 
-this.VALID_STATES = [
-   "Ready",
-   "Parsing",
-   "EOF"
-];
+   this.VALID_STATES = [
+      "Ready",
+      "Parsing",
+      "EOF"
+   ];
 
 </cfscript>
 ```
 
-### 2.4 Function Names
+### Function Names
 * Function names *must use* **Camel case**. Example: ```deleteRecordByID()```
 
-### 2.5 Abbreviations
+### Abbreviations
 Avoid abbreviations when possible. If a given abbreviation is well known to
 a given industry or domain it is acceptable to use.
 
-### 2.6 Acronyms
+### Acronyms
 Acronyms are similar to abbreviations. They should be avoided when possible.
 However some acronyms, if common enough in your domain, are acceptable.
 
@@ -310,15 +310,15 @@ However some acronyms, if common enough in your domain, are acceptable.
 ```cfm
 <cfscript>
 
-local.userSSN = "12345";
-request.urlPrefix = "http://";
-local.workerID = 1;
-local.id = 10;
+   local.userSSN = "12345";
+   request.urlPrefix = "http://";
+   local.workerID = 1;
+   local.id = 10;
 
 </cfscript>
 ```
 
-### 2.7 Package Names
+### Package Names
 Much like in Java ColdFusion supports the concept of packages. A component
 placed in a directory structure is considered to part of that package. For
 example, a component named **PermissionService.cfc** placed in a directory path
@@ -334,19 +334,19 @@ a component from this package it will look like this.
 ```cfm
 <cfscript>
 
-local.permissionService = new Services.Security.PermissionService();
+   local.permissionService = new Services.Security.PermissionService();
 
 </cfscript>
 ```
 
-### 2.8 Component File Names
+### Component File Names
 * Components (CFC files) *must use* **Pascal case**. Example: ```TokenMapper.cfc```
 
-### 2.9 CFM File Names
+### CFM File Names
 * ColdFusion files with a CFM extension *must use* **Camel case**.
    Example: ```permissionManager.cfm```
 
-### 2.10 Scopes
+### Scopes
 * All scope names *must be* **Lower case**
 
 **Example**
