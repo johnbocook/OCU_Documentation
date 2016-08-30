@@ -11,9 +11,11 @@ Whitespace and Formatting
 
 **Good**
 ```cfm
+<cfscript>
 public void function sayHi(string name, numeric age) output="false" {
    //do stuff
 }
+</cfscript>
 ```
 
 **Bad**
