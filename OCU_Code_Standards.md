@@ -13,7 +13,7 @@ Whitespace and Formatting
 ```cfm
 <cfscript>
 
-   public void function sayHi(string name, numeric age) output="false" {
+   public void function sayHi(**string name, numeric age**) output="false" {
       //do stuff
    }
 
