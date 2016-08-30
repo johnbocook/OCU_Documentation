@@ -1,7 +1,7 @@
 Whitespace and Formatting
 ----------------------------
 
-### 1.1 Indentation
+### Indentation
 * Use hard tabs set to three (3) spaces.
 * Do not mix tabs and spaces.
 
