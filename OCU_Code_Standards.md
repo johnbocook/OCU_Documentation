@@ -40,10 +40,10 @@ Whitespace and Formatting
 ```cfm
 <cfscript>
 
-local.sum = add(left=1, right=2);
-if (local.sum > 10) {
-   // Do stuff
-}
+   local.sum = add(left=1, right=2);
+   if (local.sum > 10) {
+      // Do stuff
+   }
 
 </cfscript>
 ```
@@ -52,9 +52,9 @@ if (local.sum > 10) {
 ```cfm
 <cfscript>
 
-local.sum = add ( left=1, right=2 );
-if(local.sum > 10){
-   // Do stuff
+   local.sum = add ( left=1, right=2 );
+   if(local.sum > 10){
+      // Do stuff
 }
 
 </cfscript>
@@ -75,7 +75,7 @@ local.sum = 1 + 4 + local.somethingElse;
 ```cfm
 <cfscript>
 
-local.sum = 1+4+local.somethingElse;
+   local.sum = 1+4+local.somethingElse;
 
 </cfscript>
 ```
@@ -89,11 +89,11 @@ local.sum = 1+4+local.somethingElse;
 ```cfm
 <cfscript>
 
-public string function doStuff(string name="Adam") output="false" {
-
-}
-
-local.result = doStuff(name="Bob");
+   public string function doStuff(string name="Adam") output="false" {
+   
+   }
+   
+   local.result = doStuff(name="Bob");
 
 </cfscript>
 ```
@@ -102,16 +102,16 @@ local.result = doStuff(name="Bob");
 ```cfm
 <cfscript>
 
-public string function doStuff(string name = "Adam") output="false" {
+   public string function doStuff(string name = "Adam") output="false" {
+   
+   }
 
-}
-
-local.result = doStuff(name = "Bob");
+   local.result = doStuff(name = "Bob");
 
 </cfscript>
 ```
 
-### 1.4 Curly and Square Braces
+### Curly and Square Braces
 * All open curly braces for function declarations, **try/catch** blocks, **while**,
    **if**, and structure variable declarations go on the same line as the
    statement/expression they are attached to
@@ -125,33 +125,33 @@ local.result = doStuff(name = "Bob");
 ```cfm
 <cfscript>
 
-if (isValid) {
-   // Do stuff
-}
-
-try {
-   // dangerous code
-} catch {
-   // log me!
-}
-
-local.claim = {
-   id=1,
-   token="12345",
-   associated=[1, 2, 3],
-   nonAssociated=[
-      4,
-      5,
-      6
-   ]
-};
-
-local.people = [
-   {
-      name: "Adam",
-      age: 36
+   if (isValid) {
+      // Do stuff
    }
-];
+
+   try {
+      // dangerous code
+   } catch {
+      // log me!
+   }
+
+   local.claim = {
+      id=1,
+      token="12345",
+      associated=[1, 2, 3],
+      nonAssociated=[
+         4,
+         5,
+         6
+      ]
+   };          
+
+   local.people = [
+      {
+         name: "Adam",
+         age: 36
+      }
+   ];
 
 </cfscript>
 ```
@@ -160,44 +160,44 @@ local.people = [
 ```cfm
 <cfscript>
 
-if (isValid)
-{
-   // Do stuff
-}
-
-try
-{
-   // dangerous code
-}
-catch
-{
-   // log me!
-}
-
-local.claim =
-{
-   id=1,
-   token="12345",
-   associated=
-   [
-      1,
-      2,
-      3
-   ],
-   nonAssociated=
-   [4,5,6]
-};
-
-local.people =
-[{
-   name: "Adam",
-   age: 36
-}];
+   if (isValid)
+   {
+      // Do stuff
+   }
+   
+   try
+   {
+      // dangerous code
+   }
+   catch
+   {
+      // log me!
+   }
+   
+   local.claim =
+   {
+      id=1,
+      token="12345",
+      associated=
+      [
+         1,
+         2,
+         3
+      ],
+      nonAssociated=
+      [4,5,6]
+   };
+   
+   local.people =
+   [{
+      name: "Adam",
+      age: 36
+   }];
 
 </cfscript>
 ```
 
-### 1.5 CFML/Script Conventions
+### CFML/Script Conventions
 When working with CFML (not CFScript) the following applies.
 
 * ColdFusion tags *must be* **Lower case**
